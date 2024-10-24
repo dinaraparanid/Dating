@@ -1,0 +1,27 @@
+{
+    "app_name": "Dating",
+    "off": "OFF",
+
+    "tab_home": "Home",
+    "tab_chats": "Chats",
+    "tab_likes": "Likes",
+    "tab_settings": "Settings",
+
+    "chats_title": "CHATS",
+    "chats_liked": "{value, plural, one{1 guy liked you} other{{value} people liked you}}",
+    "@chats_liked": {
+        "description": "Number of people that liked user"
+    },
+
+    "chat_empty_placeholder": "Start chatting",
+    "chat_input_placeholder": "Message...",
+    "chat_common_temptations": "{value, plural, zero{No common temptations} one{1 common temptation} other{{value} common temptations}}",
+    "@chat_common_temptations": {
+        "description": "Number of common temptations"
+    },
+
+    "incognito_title": "Incognito mode for 24 hours",
+    "incognito_description": "Become invisible in the feed and chats, hide the ad and enjoy <Space> unnoticed",
+    "incognito_buy": "Buy",
+    "incognito_terms_conditions": "TERMS AND CONDITIONS"
+}

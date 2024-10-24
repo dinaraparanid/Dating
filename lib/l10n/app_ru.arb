@@ -1,0 +1,28 @@
+{
+    "app_name": "Dating",
+    "off": "OFF",
+
+    "tab_home": "Домой",
+    "tab_chats": "Чаты",
+    "tab_likes": "Лайки",
+    "tab_settings": "Настройки",
+
+    "chats_title": "ЧАТЫ",
+    "chats_liked": "{value, plural, one{1 человек тебя лайкнул} two{2 человека тебя лайкнули} few{{value} человека тебя лайкнули} other{{value} человек тебя лайкнули}}",
+    "@chats_liked": {
+        "description": "Number of people that liked user"
+    },
+
+    "chat_empty_placeholder": "Начни общение",
+    "chat_input_placeholder": "Сообщение...",
+
+    "chat_common_temptations": "{value, plural, zero{Нет общих соблазнов} one{1 общий соблазн} two{2 общих соблазна} few{{value} общих соблазна} other{{value} общих соблазнов}}",
+    "@chat_common_temptations": {
+        "description": "Number of common temptations"
+    },
+
+    "incognito_title": "Режим инкогнито на 24 часа",
+    "incognito_description": "Стань невидимкой в ленте и чатах, скрой объявление и наслаждайся <Space> незамеченным",
+    "incognito_buy": "Купить",
+    "incognito_terms_conditions": "условия и положения"
+}
