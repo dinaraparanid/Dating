@@ -7,12 +7,21 @@ part 'state.freezed.dart';
 @freezed
 abstract class ChatsState with _$ChatsState {
   const factory ChatsState({
-    required UiState<int> likesCount,
+    required UiState<int> likesCountState,
     required List<Chat> chats,
   }) = _ChatsState;
 
-  factory ChatsState.initial() => const ChatsState(
-    likesCount: UiState.initial(),
+  factory ChatsState.initial() => ChatsState(
+    likesCountState: const UiState.initial(),
     chats: [],
   );
+}
+
+extension Properties on ChatsState {
+  int get newLikes => likesCountState.getOrNull ?? 0;
+
+  bool get hasNewLikes {
+    final count = likesCountState.getOrNull;
+    return count != null && count > 0;
+  }
 }

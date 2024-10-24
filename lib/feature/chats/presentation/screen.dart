@@ -1,6 +1,8 @@
 import 'package:dating/core/ui/theme/theme.dart';
 import 'package:dating/feature/chats/component/component.dart';
-import 'package:dating/feature/chats/component/state.dart';
+import 'package:dating/feature/chats/presentation/ui/chat.dart';
+import 'package:dating/feature/chats/presentation/ui/new_likes.dart';
+import 'package:dating/feature/chats/presentation/ui/top_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +17,6 @@ final class ChatsScreen extends StatelessWidget {
       create: (context) => ChatsComponent(),
       child: BlocBuilder<ChatsComponent, ChatsState>(
         builder: (context, state) {
-          final onEvent = context.read<ChatsComponent>().add;
 
           return Container(
             width: double.infinity,
@@ -33,7 +34,23 @@ final class ChatsScreen extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [],
+              children: [
+                const TopBar(),
+
+                SizedBox(height: theme.dimensions.padding.extraMedium),
+
+                Expanded(
+                  child: ListView.separated(
+                    itemCount: state.chats.length + 1,
+                    separatorBuilder: (ctx, idx) => SizedBox(
+                      height: theme.dimensions.padding.extraMedium,
+                    ),
+                    itemBuilder: (ctx, idx) => idx == 0
+                        ? const NewLikes()
+                        : ChatUi(model: state.chats[idx - 1]),
+                  ),
+                ),
+              ],
             ),
           );
         },

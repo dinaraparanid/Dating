@@ -23,17 +23,27 @@ final class RootScreen extends StatelessWidget {
           return Scaffold(
             extendBody: true,
             backgroundColor: theme.colors.background.primary,
-            bottomNavigationBar: BottomNavigationBar(
-              selectedItemColor: theme.colors.navBar.selected,
-              unselectedItemColor: theme.colors.navBar.unselected,
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              currentIndex: state.selectedTab.index,
-              onTap: (index) => component.onTabClick(Tabs.values[index]),
-              items: NavBarItems(
-                theme: theme,
-                state: state,
-                strings: strings,
+            bottomNavigationBar: Container(
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border(
+                  top: BorderSide(
+                    color: theme.colors.border.primary,
+                  )
+                )
+              ),
+              child: BottomNavigationBar(
+                selectedItemColor: theme.colors.navBar.selected,
+                unselectedItemColor: theme.colors.navBar.unselected,
+                showSelectedLabels: false,
+                showUnselectedLabels: false,
+                currentIndex: state.selectedTab.index,
+                onTap: (index) => component.onTabClick(Tabs.values[index]),
+                items: NavBarItems(
+                  theme: theme,
+                  state: state,
+                  strings: strings,
+                ),
               ),
             ),
             body: Body(selectedTab: state.selectedTab),
