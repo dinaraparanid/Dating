@@ -61,7 +61,7 @@ final class RootScreen extends StatelessWidget {
       child: const Text('TODO: Home screen'),
     ),
 
-    Tabs.chat => const ChatsScreen(),
+    Tabs.chat => ChatsScreen(),
 
     Tabs.likes => Container(
       width: double.infinity,

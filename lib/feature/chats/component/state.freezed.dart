@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ChatsState {
   UiState<int> get likesCountState => throw _privateConstructorUsedError;
   List<Chat> get chats => throw _privateConstructorUsedError;
+  ChatsEffect? get effect => throw _privateConstructorUsedError;
 
   /// Create a copy of ChatsState
   /// with the given fields replaced by the non-null parameter values.
@@ -32,9 +33,11 @@ abstract class $ChatsStateCopyWith<$Res> {
           ChatsState value, $Res Function(ChatsState) then) =
       _$ChatsStateCopyWithImpl<$Res, ChatsState>;
   @useResult
-  $Res call({UiState<int> likesCountState, List<Chat> chats});
+  $Res call(
+      {UiState<int> likesCountState, List<Chat> chats, ChatsEffect? effect});
 
   $UiStateCopyWith<int, $Res> get likesCountState;
+  $ChatsEffectCopyWith<$Res>? get effect;
 }
 
 /// @nodoc
@@ -54,6 +57,7 @@ class _$ChatsStateCopyWithImpl<$Res, $Val extends ChatsState>
   $Res call({
     Object? likesCountState = null,
     Object? chats = null,
+    Object? effect = freezed,
   }) {
     return _then(_value.copyWith(
       likesCountState: null == likesCountState
@@ -64,6 +68,10 @@ class _$ChatsStateCopyWithImpl<$Res, $Val extends ChatsState>
           ? _value.chats
           : chats // ignore: cast_nullable_to_non_nullable
               as List<Chat>,
+      effect: freezed == effect
+          ? _value.effect
+          : effect // ignore: cast_nullable_to_non_nullable
+              as ChatsEffect?,
     ) as $Val);
   }
 
@@ -76,6 +84,20 @@ class _$ChatsStateCopyWithImpl<$Res, $Val extends ChatsState>
       return _then(_value.copyWith(likesCountState: value) as $Val);
     });
   }
+
+  /// Create a copy of ChatsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ChatsEffectCopyWith<$Res>? get effect {
+    if (_value.effect == null) {
+      return null;
+    }
+
+    return $ChatsEffectCopyWith<$Res>(_value.effect!, (value) {
+      return _then(_value.copyWith(effect: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -86,10 +108,13 @@ abstract class _$$ChatsStateImplCopyWith<$Res>
       __$$ChatsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UiState<int> likesCountState, List<Chat> chats});
+  $Res call(
+      {UiState<int> likesCountState, List<Chat> chats, ChatsEffect? effect});
 
   @override
   $UiStateCopyWith<int, $Res> get likesCountState;
+  @override
+  $ChatsEffectCopyWith<$Res>? get effect;
 }
 
 /// @nodoc
@@ -107,6 +132,7 @@ class __$$ChatsStateImplCopyWithImpl<$Res>
   $Res call({
     Object? likesCountState = null,
     Object? chats = null,
+    Object? effect = freezed,
   }) {
     return _then(_$ChatsStateImpl(
       likesCountState: null == likesCountState
@@ -117,6 +143,10 @@ class __$$ChatsStateImplCopyWithImpl<$Res>
           ? _value._chats
           : chats // ignore: cast_nullable_to_non_nullable
               as List<Chat>,
+      effect: freezed == effect
+          ? _value.effect
+          : effect // ignore: cast_nullable_to_non_nullable
+              as ChatsEffect?,
     ));
   }
 }
@@ -125,7 +155,9 @@ class __$$ChatsStateImplCopyWithImpl<$Res>
 
 class _$ChatsStateImpl implements _ChatsState {
   const _$ChatsStateImpl(
-      {required this.likesCountState, required final List<Chat> chats})
+      {required this.likesCountState,
+      required final List<Chat> chats,
+      this.effect})
       : _chats = chats;
 
   @override
@@ -139,8 +171,11 @@ class _$ChatsStateImpl implements _ChatsState {
   }
 
   @override
+  final ChatsEffect? effect;
+
+  @override
   String toString() {
-    return 'ChatsState(likesCountState: $likesCountState, chats: $chats)';
+    return 'ChatsState(likesCountState: $likesCountState, chats: $chats, effect: $effect)';
   }
 
   @override
@@ -150,12 +185,13 @@ class _$ChatsStateImpl implements _ChatsState {
             other is _$ChatsStateImpl &&
             (identical(other.likesCountState, likesCountState) ||
                 other.likesCountState == likesCountState) &&
-            const DeepCollectionEquality().equals(other._chats, _chats));
+            const DeepCollectionEquality().equals(other._chats, _chats) &&
+            (identical(other.effect, effect) || other.effect == effect));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, likesCountState,
-      const DeepCollectionEquality().hash(_chats));
+      const DeepCollectionEquality().hash(_chats), effect);
 
   /// Create a copy of ChatsState
   /// with the given fields replaced by the non-null parameter values.
@@ -169,12 +205,15 @@ class _$ChatsStateImpl implements _ChatsState {
 abstract class _ChatsState implements ChatsState {
   const factory _ChatsState(
       {required final UiState<int> likesCountState,
-      required final List<Chat> chats}) = _$ChatsStateImpl;
+      required final List<Chat> chats,
+      final ChatsEffect? effect}) = _$ChatsStateImpl;
 
   @override
   UiState<int> get likesCountState;
   @override
   List<Chat> get chats;
+  @override
+  ChatsEffect? get effect;
 
   /// Create a copy of ChatsState
   /// with the given fields replaced by the non-null parameter values.

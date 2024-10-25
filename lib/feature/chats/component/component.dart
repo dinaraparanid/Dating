@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:dating/core/ui/foundation/ui_state.dart';
 import 'package:dating/domain/chat/chat.dart';
+import 'package:dating/feature/chats/component/effect.dart';
 import 'package:dating/feature/chats/component/event.dart';
 import 'package:dating/feature/chats/component/state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,9 +23,11 @@ final class ChatsComponent extends Bloc<ChatsEvent, ChatsState> {
     );
 
     on<IncognitoClick>(
-      (event, emit) {
-        // TODO: show incognito
-      }
+      (event, emit) => emit(state.copyWith(effect: const IncognitoShown())),
+    );
+
+    on<CancelEffects>(
+      (event, emit) => emit(state.copyWith(effect: const None())),
     );
 
     on<ChatClick>(

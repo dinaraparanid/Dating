@@ -6,6 +6,8 @@ final class Create extends ChatsEvent {}
 
 final class IncognitoClick extends ChatsEvent {}
 
+final class CancelEffects extends ChatsEvent {}
+
 final class ChatClick extends ChatsEvent {
   final Chat chat;
   ChatClick({required this.chat});

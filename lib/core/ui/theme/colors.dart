@@ -11,6 +11,7 @@ const _PhilippineGray = Color(0xFF8D8D8D);
 const _CetaceanBlue = Color(0xFF0D1333);
 const _BlackShadows = Color(0xFFBCB3B3);
 const _RoseGarnet = Color(0xFFAA044A);
+const _OldBurgundy = Color(0xFF422B2B);
 
 @immutable
 final class AppColors {
@@ -93,17 +94,20 @@ final class AppTextColors {
   final Color primary;
   final Color secondary;
   final Color onButton;
+  final Color onImage;
 
   const AppTextColors({
     required this.primary,
     required this.secondary,
     required this.onButton,
+    required this.onImage,
   });
 
   factory AppTextColors._default() => const AppTextColors(
     primary: _Cultured,
     secondary: _PhilippineGray,
     onButton: _BlackShadows,
+    onImage: _OldBurgundy,
   );
 }
 

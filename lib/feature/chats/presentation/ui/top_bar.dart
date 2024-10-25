@@ -77,7 +77,7 @@ final class TopBar extends StatelessWidget {
             SizedBox(width: theme.dimensions.padding.medium),
 
             Image.asset(
-              AppImages.loadPng('incognito_switcher'),
+              AppImages.loadPng('incognito_yellow'),
               width: _switcherIconWidth,
             )
           ],
