@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Chat {
   String get userAvatar => throw _privateConstructorUsedError;
   bool get isRead => throw _privateConstructorUsedError;
-  int get timestampMs => throw _privateConstructorUsedError;
+  String get time => throw _privateConstructorUsedError;
   List<String> get messages => throw _privateConstructorUsedError;
 
   /// Create a copy of Chat
@@ -33,7 +33,7 @@ abstract class $ChatCopyWith<$Res> {
       _$ChatCopyWithImpl<$Res, Chat>;
   @useResult
   $Res call(
-      {String userAvatar, bool isRead, int timestampMs, List<String> messages});
+      {String userAvatar, bool isRead, String time, List<String> messages});
 }
 
 /// @nodoc
@@ -53,7 +53,7 @@ class _$ChatCopyWithImpl<$Res, $Val extends Chat>
   $Res call({
     Object? userAvatar = null,
     Object? isRead = null,
-    Object? timestampMs = null,
+    Object? time = null,
     Object? messages = null,
   }) {
     return _then(_value.copyWith(
@@ -65,10 +65,10 @@ class _$ChatCopyWithImpl<$Res, $Val extends Chat>
           ? _value.isRead
           : isRead // ignore: cast_nullable_to_non_nullable
               as bool,
-      timestampMs: null == timestampMs
-          ? _value.timestampMs
-          : timestampMs // ignore: cast_nullable_to_non_nullable
-              as int,
+      time: null == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String,
       messages: null == messages
           ? _value.messages
           : messages // ignore: cast_nullable_to_non_nullable
@@ -85,7 +85,7 @@ abstract class _$$ChatImplCopyWith<$Res> implements $ChatCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String userAvatar, bool isRead, int timestampMs, List<String> messages});
+      {String userAvatar, bool isRead, String time, List<String> messages});
 }
 
 /// @nodoc
@@ -102,7 +102,7 @@ class __$$ChatImplCopyWithImpl<$Res>
   $Res call({
     Object? userAvatar = null,
     Object? isRead = null,
-    Object? timestampMs = null,
+    Object? time = null,
     Object? messages = null,
   }) {
     return _then(_$ChatImpl(
@@ -114,10 +114,10 @@ class __$$ChatImplCopyWithImpl<$Res>
           ? _value.isRead
           : isRead // ignore: cast_nullable_to_non_nullable
               as bool,
-      timestampMs: null == timestampMs
-          ? _value.timestampMs
-          : timestampMs // ignore: cast_nullable_to_non_nullable
-              as int,
+      time: null == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String,
       messages: null == messages
           ? _value._messages
           : messages // ignore: cast_nullable_to_non_nullable
@@ -132,7 +132,7 @@ class _$ChatImpl implements _Chat {
   const _$ChatImpl(
       {required this.userAvatar,
       required this.isRead,
-      required this.timestampMs,
+      required this.time,
       required final List<String> messages})
       : _messages = messages;
 
@@ -141,7 +141,7 @@ class _$ChatImpl implements _Chat {
   @override
   final bool isRead;
   @override
-  final int timestampMs;
+  final String time;
   final List<String> _messages;
   @override
   List<String> get messages {
@@ -152,7 +152,7 @@ class _$ChatImpl implements _Chat {
 
   @override
   String toString() {
-    return 'Chat(userAvatar: $userAvatar, isRead: $isRead, timestampMs: $timestampMs, messages: $messages)';
+    return 'Chat(userAvatar: $userAvatar, isRead: $isRead, time: $time, messages: $messages)';
   }
 
   @override
@@ -163,13 +163,12 @@ class _$ChatImpl implements _Chat {
             (identical(other.userAvatar, userAvatar) ||
                 other.userAvatar == userAvatar) &&
             (identical(other.isRead, isRead) || other.isRead == isRead) &&
-            (identical(other.timestampMs, timestampMs) ||
-                other.timestampMs == timestampMs) &&
+            (identical(other.time, time) || other.time == time) &&
             const DeepCollectionEquality().equals(other._messages, _messages));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userAvatar, isRead, timestampMs,
+  int get hashCode => Object.hash(runtimeType, userAvatar, isRead, time,
       const DeepCollectionEquality().hash(_messages));
 
   /// Create a copy of Chat
@@ -185,7 +184,7 @@ abstract class _Chat implements Chat {
   const factory _Chat(
       {required final String userAvatar,
       required final bool isRead,
-      required final int timestampMs,
+      required final String time,
       required final List<String> messages}) = _$ChatImpl;
 
   @override
@@ -193,7 +192,7 @@ abstract class _Chat implements Chat {
   @override
   bool get isRead;
   @override
-  int get timestampMs;
+  String get time;
   @override
   List<String> get messages;
 

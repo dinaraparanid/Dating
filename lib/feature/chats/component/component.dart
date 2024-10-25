@@ -47,39 +47,39 @@ final class ChatsComponent extends Bloc<ChatsEvent, ChatsState> {
 
 List<Chat> _stub() => const [
   Chat(
-    userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
+    userAvatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxAA8303_86z01TPPqxwesKe7q_OJSJgWxvg&s',
     isRead: true,
-    timestampMs: 1729802723,
+    time: '23 ч 43 мин',
     messages: ['Отлично выглядишь'],
   ),
   Chat(
-    userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
+    userAvatar: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Prince_at_Coachella_%28cropped%29.jpg',
     isRead: false,
-    timestampMs: 1729802723,
+    time: '20 ч 40 мин',
     messages: ['Встретимся? Я рядом'],
   ),
   Chat(
-    userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
+    userAvatar: 'https://media.cnn.com/api/v1/images/stellar/prod/230515101146-the-weeknd-121222.jpg?c=original',
     isRead: true,
-    timestampMs: 1729802723,
+    time: '18 ч 40 мин',
     messages: ['Встретимся?'],
   ),
   Chat(
     userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
     isRead: true,
-    timestampMs: 1729802723,
+    time: '09 ч 40 мин',
     messages: ['Давно тебя хочу'],
   ),
   Chat(
-    userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
+    userAvatar: 'https://cdn.britannica.com/05/236505-050-17B6E34A/Elon-Musk-2022.jpg?w=385',
     isRead: true,
-    timestampMs: 1729802723,
+    time: '03 ч 04 мин',
     messages: ['Я в ванной.. Скинь фото...'],
   ),
   Chat(
-    userAvatar: 'https://i.ytimg.com/vi/Mw3jK9YwOxk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCg1MA8=&rs=AOn4CLADLNZ64XZMOhvfep-dTNe4ITNcBQ',
+    userAvatar: 'https://cdn.britannica.com/89/152989-050-DDF277EA/Johnny-Depp-2011.jpg',
     isRead: true,
-    timestampMs: 1729802723,
+    time: '01 ч 09 мин',
     messages: ['Привет'],
   ),
 ];

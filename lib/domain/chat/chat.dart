@@ -7,7 +7,7 @@ abstract class Chat with _$Chat {
   const factory Chat({
     required String userAvatar,
     required bool isRead,
-    required int timestampMs,
+    required String time,
     required List<String> messages,
   }) = _Chat;
 }

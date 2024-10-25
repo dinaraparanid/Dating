@@ -49,7 +49,7 @@ final class ChatUi extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      model.timestampMs.toString(),
+                      model.time,
                       style: theme.typography.caption.copyWith(
                         color: theme.colors.text.primary,
                         fontWeight: FontWeight.w300,
