@@ -1,4 +1,5 @@
 import 'package:dating/core/ui/theme/theme.dart';
+import 'package:dating/feature/chat/presentation/screen.dart';
 import 'package:dating/feature/chats/component/component.dart';
 import 'package:dating/feature/chats/component/effect.dart';
 import 'package:dating/feature/chats/presentation/ui/chat.dart';
@@ -34,6 +35,13 @@ final class ChatsScreen extends StatelessWidget {
               onCancel: cancelEffect,
             );
 
+            case NavigateToChat(model: final model):
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ChatScreen(model: model),
+                )
+              );
+
             case None(): doNothing;
             case null: doNothing;
           }
@@ -61,15 +69,19 @@ final class ChatsScreen extends StatelessWidget {
 
               Expanded(
                 child: ListView.separated(
-                  shrinkWrap: true,
                   padding: EdgeInsets.all(theme.dimensions.padding.zero),
                   itemCount: state.chats.length + 1,
                   separatorBuilder: (ctx, idx) => SizedBox(
                     height: theme.dimensions.padding.extraMedium,
                   ),
                   itemBuilder: (ctx, idx) => idx == 0
-                      ? const NewLikes()
-                      : ChatUi(model: state.chats[idx - 1]),
+                    ? const NewLikes()
+                    : ChatUi(
+                      model: state.chats[idx - 1],
+                      onClick: () => context
+                        .read<ChatsComponent>()
+                        .add(ChatClick(chat: state.chats[idx - 1])),
+                    ),
                 ),
               ),
             ],

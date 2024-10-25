@@ -23,7 +23,9 @@ final class ChatsComponent extends Bloc<ChatsEvent, ChatsState> {
     );
 
     on<IncognitoClick>(
-      (event, emit) => emit(state.copyWith(effect: const IncognitoShown())),
+      (event, emit) => emit(state.copyWith(
+        effect: IncognitoShown(key: DateTime.now().millisecondsSinceEpoch),
+      )),
     );
 
     on<CancelEffects>(
@@ -31,9 +33,12 @@ final class ChatsComponent extends Bloc<ChatsEvent, ChatsState> {
     );
 
     on<ChatClick>(
-      (event, emit) {
-        // TODO: navigate to chat
-      }
+      (event, emit) => emit(state.copyWith(
+        effect: NavigateToChat(
+          model: event.chat,
+          key: DateTime.now().millisecondsSinceEpoch,
+        ),
+      ))
     );
 
     add(Create());

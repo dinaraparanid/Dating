@@ -43,17 +43,20 @@ final class AppBackgroundColors {
   final Color primary;
   final Color content;
   final Color incognito;
+  final Color temptations;
 
   const AppBackgroundColors({
     required this.primary,
     required this.content,
     required this.incognito,
+    required this.temptations,
   });
 
   factory AppBackgroundColors._default() => const AppBackgroundColors(
     primary: _LightSilver,
     content: _RaisinBlack,
     incognito: _CetaceanBlue,
+    temptations: _RoyalPurple,
   );
 }
 
