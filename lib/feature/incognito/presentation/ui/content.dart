@@ -75,13 +75,12 @@ final class IncognitoBottomSheetContent extends StatelessWidget {
 
               const SubscriptionRow(),
 
-              SizedBox(height: theme.dimensions.padding.extraMedium),
-
               SizedBox(
                 width: double.infinity,
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: theme.dimensions.padding.extraMedium,
+                    vertical: theme.dimensions.padding.extraMedium,
                   ),
                   child: const BuyButton(),
                 ),

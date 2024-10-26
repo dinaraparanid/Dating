@@ -12,9 +12,10 @@ void showIncognitoBottomSheet({
   final theme = context.read<AppTheme>();
 
   showModalBottomSheet(
+    isScrollControlled: true,
     context: context,
     backgroundColor: theme.colors.background.incognito,
     shape: const RoundedRectangleBorder(),
-    builder: (context) => IncognitoBottomSheetContent(onClose: onClose),
+    builder: (context) => Wrap(children: [IncognitoBottomSheetContent(onClose: onClose)]),
   ).then((_) { onCancel(); });
 }

@@ -69,7 +69,12 @@ final class ChatsScreen extends StatelessWidget {
 
               Expanded(
                 child: ListView.separated(
-                  padding: EdgeInsets.all(theme.dimensions.padding.zero),
+                  padding: EdgeInsets.only(
+                    top: theme.dimensions.padding.zero,
+                    left: theme.dimensions.padding.zero,
+                    right: theme.dimensions.padding.zero,
+                    bottom: theme.dimensions.padding.enormous,
+                  ),
                   itemCount: state.chats.length + 1,
                   separatorBuilder: (ctx, idx) => SizedBox(
                     height: theme.dimensions.padding.extraMedium,
